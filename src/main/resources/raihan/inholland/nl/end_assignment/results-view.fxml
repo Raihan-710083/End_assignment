@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/11.0.1"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="raihan.inholland.nl.end_assignment.ResultsController">
+    <children>
+        <Label text="Quiz Results" style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+        <Label fx:id="scoreLabel" text="Score: 0/0" style="-fx-font-size: 18px;"/>
+        <Label fx:id="playerNameLabel" text="Player: " style="-fx-font-size: 14px;"/>
+        <Button text="Back to Menu" onAction="#handleBackToMenu" style="-fx-font-size: 14px; -fx-pref-width: 150;"/>
+    </children>
+</VBox>

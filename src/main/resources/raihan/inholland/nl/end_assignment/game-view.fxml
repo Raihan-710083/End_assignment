@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/11.0.1"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="raihan.inholland.nl.end_assignment.GameController">
+    <children>
+        <Label fx:id="questionTitle" text="Question will appear here" style="-fx-font-size: 18px; -fx-font-weight: bold;" wrapText="true"/>
+        <Label fx:id="timerLabel" text="Time: --" style="-fx-font-size: 14px;"/>
+        <VBox fx:id="answersContainer" spacing="10.0" alignment="CENTER_LEFT"/>
+        <Button fx:id="submitButton" text="Submit Answer" onAction="#handleSubmitAnswer" style="-fx-font-size: 14px;"/>
+        <Label fx:id="playerNameLabel" text="Player: " style="-fx-font-size: 12px;"/>
+    </children>
+</VBox>

@@ -1,19 +1,24 @@
 package raihan.inholland.nl.end_assignment;
 
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
 import javafx.stage.Stage;
-
-import java.io.IOException;
 
 public class HelloApplication extends Application {
     @Override
-    public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 800, 600);
-        stage.setTitle("Quiz Game");
-        stage.setScene(scene);
-        stage.show();
+    public void start(Stage stage) throws Exception {
+        ScreenManager screenManager = ScreenManager.getInstance();
+        screenManager.setPrimaryStage(stage);
+
+        // Load all screens
+        screenManager.loadScreen("menu", "menu-view.fxml");
+        screenManager.loadScreen("game", "game-view.fxml");
+        screenManager.loadScreen("results", "results-view.fxml");
+
+        // Show menu screen first
+        screenManager.showScreen("menu");
+    }
+
+    public static void main(String[] args) {
+        launch(args);
     }
 }
