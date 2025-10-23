@@ -2,15 +2,19 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.*?>
 
-<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/11.0.1"
-      xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="raihan.inholland.nl.end_assignment.ResultsController">
-    <children>
-        <Label text="Quiz Results" style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
-        <Label fx:id="scoreLabel" text="Score: 0/0" style="-fx-font-size: 18px;"/>
-        <Label fx:id="playerNameLabel" text="Player: " style="-fx-font-size: 14px;"/>
-        <Button text="Back to Menu" onAction="#handleBackToMenu" style="-fx-font-size: 14px; -fx-pref-width: 150;"/>
-    </children>
+<VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="raihan.inholland.nl.end_assignment.ResultsController"
+      spacing="20" alignment="CENTER" style="-fx-padding: 40;">
+
+    <Label text="Quiz Results" style="-fx-font-size: 24; -fx-font-weight: bold;"/>
+
+    <VBox spacing="10" alignment="CENTER">
+        <Label fx:id="playerNameLabel" style="-fx-font-size: 16;"/>
+        <Label fx:id="scoreLabel" style="-fx-font-size: 20; -fx-font-weight: bold;"/>
+        <Label fx:id="performanceLabel" style="-fx-font-size: 18; -fx-text-fill: #2E8B57;"/>
+    </VBox>
+
+    <Button text="Back to Menu" onAction="#handleBackToMenu"
+            style="-fx-font-size: 14; -fx-pref-width: 120;"/>
 </VBox>
